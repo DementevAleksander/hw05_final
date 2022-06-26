@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Об авторе проекта{% endblock %}
+{% block content %}
+{% load static %}
+<h1>Привет, я автор этого сайта!</h1>
+<br>
+
+<div class="row">
+  <aside class="col-12 col-md-7">
+    <img class="author_img" src="{% static 'img/author.JPG' %}">
+  </aside>
+
+  <article class="col-12 col-md-5">
+    <p>
+      Меня зовут Александр Дементьев!
+      Мне нравится использовать компьютерные программы и веб-приложения, которые помогают оптимизировать своё время в повседневной жизни. Я пришёл в мир программирования, потому что я сам захотел делать такие программы и веб-приложения, делать полезные вещи, которыми будут пользоваться я и другие люди.
+    </p>
+    <p>
+      Если у вас есть идеи по разработке интересных веб-приложений, то вы смело можете обращаться ко мне за помощью.
+    </p>
+    <span class="author_span">
+      <p>Вот что я умею:</p>
+      <a class="navbar-brand" href="{% url 'about:tech' %}">
+        <img src="{% static 'img/logo.png' %}" width="30" height="30" class="d-inline-block align-top" alt="">
+      </a>
+    </span>
+
+    <span class="author_span">
+      Мои контакты:
+      <a class="navbar-brand" target="_blank" href="https://github.com/DementevAleksander">
+        <img src="{% static 'img/github.png' %}" width="30" height="30" class="d-inline-block align-top" alt="">
+      </a>
+    </span>
+
+    
+
+
+  </article>
+</div>
+{% endblock %} 
