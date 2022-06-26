@@ -10,8 +10,6 @@
     <main>
       {% block content %}
         <h1>Последние обновления на сайте</h1>
-        {% load cache %}
-        {% cache 20 index_page page_obj %}
         {% include 'posts/includes/switcher.html' %}
           {% for post in page_obj %}
             <article>
@@ -33,7 +31,6 @@
             </article>
             {% if not forloop.last %}<hr>{% endif %}
           {% endfor %}
-        {% endcache %}
         {% include 'posts/includes/paginator.html' %} 
       {% endblock %}
     </main>

@@ -2,6 +2,7 @@ from django.core.paginator import Paginator
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
+from django.views.decorators.cache import cache_page
 
 
 from .models import Post, Group, Follow
@@ -11,6 +12,7 @@ LIMIT_POSTS = 10
 User = get_user_model()
 
 
+@cache_page(60 * 20)
 def index(request):
     post_list = Post.objects.select_related().all()
     page_obj = paginator(request, post_list, LIMIT_POSTS)
@@ -152,11 +154,12 @@ def follow_index(request):
 def profile_follow(request, username):
     follower = request.user
     followed = User.objects.get(username=username)
-    subscribed_author = Follow.objects.filter(user=follower, author=followed)
     if follower == followed:
         return redirect('posts:profile', username=username)
-    if not subscribed_author:
-        Follow.objects.create(user=follower, author=followed)
+    obj, created = Follow.objects.get_or_create(
+        user=follower,
+        author=followed,
+    )
     return redirect('posts:profile', username=username)
 
 
