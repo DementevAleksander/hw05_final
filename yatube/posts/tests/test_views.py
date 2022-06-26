@@ -304,14 +304,12 @@ class FollowTests(TestCase):
            на других пользователей и удалять их из подписок."""
         self.authorized_client.get(reverse(
             'posts:profile_follow',
-            kwargs={'username': self.followed}
-            ))
+            kwargs={'username': self.followed}))
         self.assertEqual(Follow.objects.count(), 1)
 
         self.authorized_client.get(reverse(
             'posts:profile_unfollow',
-            kwargs={'username': self.followed}
-            ))
+            kwargs={'username': self.followed}))
         self.assertEqual(Follow.objects.count(), 0)
 
     def test_new_entry_appears_feed(self):
@@ -319,8 +317,7 @@ class FollowTests(TestCase):
            на него подписан и не появляется в ленте тех, кто не подписан."""
         self.authorized_client.get(reverse(
             'posts:profile_follow',
-            kwargs={'username': self.followed}
-            ))
+            kwargs={'username': self.followed}))
         self.assertEqual(Follow.objects.count(), 1)
 
         followed = Follow.objects.filter(author=self.followed)
