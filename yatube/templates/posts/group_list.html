@@ -1,12 +1,10 @@
 {% extends 'base.html' %}
 {% load thumbnail %}
 
-<!DOCTYPE html>
-<html lang="ru">
+
   {% block title %}
     Записи сообщества {{ group.title }}
   {% endblock %}
-  <body>
     <main>
       {% block content %}
         <h1>{{ group.title }}</h1>
@@ -15,7 +13,8 @@
           <article>
             <ul>
               <li>
-                Автор: {{ post.author.get_full_name }}
+                Автор:
+                <a href="{% url 'posts:profile' post.author.username %}">{{ post.author.get_full_name }}</a>
               </li>
               <li>
                 Дата публикации: {{ post.pub_date|date:"d E Y" }}
@@ -25,12 +24,10 @@
               <img class="card-img my-2" src="{{ im.url }}">
             {% endthumbnail %}
             <p>{{ post.text }}</p>
-            <a href="{% url 'posts:post_detail' post.id %}">подробная информация</a>
+            <a class="btn btn-primary" href="{% url 'posts:post_detail' post.id %}">Прочитать</a>
           </article>
         {% if not forloop.last %}<hr>{% endif %}
         {% endfor %}
         {% include 'posts/includes/paginator.html' %}
       {% endblock %}
     </main>
-  </body>
-</html>

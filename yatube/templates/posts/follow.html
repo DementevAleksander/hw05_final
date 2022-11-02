@@ -7,7 +7,8 @@
     <article>
       <ul>
         <li>
-          Автор: {{ post.author.get_full_name }}
+          Автор:
+          <a href="{% url 'posts:profile' post.author.username %}">{{ post.author.get_full_name }}</a>
         </li>
         <li>
           Дата публикации: {{ post.pub_date|date:"d E Y" }}
@@ -18,7 +19,8 @@
       {% endthumbnail %}
       <p> {{ post.text }} </p>  
       {% if post.group %}
-        <a href="{% url 'posts:group_list' post.group.slug %}">все записи группы</a>
+        <a class="btn btn-primary" href="{% url 'posts:group_list' post.group.slug %}">Все записи группы</a>
+        <a class="btn btn-primary" href="{% url 'posts:post_detail' post.id %}">Прочитать</a>
       {% endif %}
     </article>
     {% if not forloop.last %}<hr>{% endif %}

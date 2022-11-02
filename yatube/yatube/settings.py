@@ -23,13 +23,18 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'zvn@cx5l132t3kjkj3^$d8=u1x68#syn9gk23%g4(gt%&p@fam'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     '[::1]',
     'testserver',
+    'www.DementevAleksander.pythonanywhere.com',
+    'DementevAleksander.pythonanywhere.com',
+    'www.dementevaleksander.pythonanywhere.com',
+    'dementevaleksander.pythonanywhere.com',
+    '84.201.139.126',
 ]
 
 
@@ -47,9 +52,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # 'debug_toolbar',
 ]
 
 MIDDLEWARE = [
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -130,6 +137,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+# STATIC_ROOT = 'D:/YandexDisk/03_Codings/Sites/88_YandexPracticum/hw05_final/yatube/static/'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 LOGIN_URL = 'users:login'
@@ -144,3 +152,11 @@ CACHES = {
         'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
     }
 }
+
+# INTERNAL_IPS = [
+#     '127.0.0.1',
+# ]
+
+# if DEBUG:
+#     import mimetypes
+#     mimetypes.add_type("application/javascript", ".js", True)

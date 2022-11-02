@@ -2,7 +2,7 @@
 {% block title %}Об авторе проекта{% endblock %}
 {% block content %}
 {% load static %}
-<h1>Привет, я автор этого сайта!</h1>
+<h1 style="text-align:center;">Привет, я автор этого сайта!</h1>
 <br>
 
 <div class="row">
@@ -19,22 +19,100 @@
       Если у вас есть идеи по разработке интересных веб-приложений, то вы смело можете обращаться ко мне за помощью.
     </p>
     <span class="author_span">
-      <p>Вот что я умею:</p>
+      <p>Технологии:</p>
       <a class="navbar-brand" href="{% url 'about:tech' %}">
         <img src="{% static 'img/logo.png' %}" width="30" height="30" class="d-inline-block align-top" alt="">
       </a>
     </span>
 
     <span class="author_span">
-      Мои контакты:
+      Мои Github:
       <a class="navbar-brand" target="_blank" href="https://github.com/DementevAleksander">
         <img src="{% static 'img/github.png' %}" width="30" height="30" class="d-inline-block align-top" alt="">
       </a>
     </span>
-
-    
-
-
   </article>
+
+  <section class="section_skills" id="section_skills">
+    <h1>Вот что я умею</h1>
+    <div class="section_wrapper">
+      <h3>Разработка</h3>
+
+      <div class="skillbar" data-percent="100">
+        <div class="skillbar-title development"><span>HTML5</span></div>
+        <div class="skillbar-bar development_line"></div>
+        <div class="skill-bar-percent">100%</div>
+      </div>
+      
+      <div class="skillbar" data-percent="95">
+        <div class="skillbar-title development"><span>CSS3</span></div> 
+        <div class="skillbar-bar development_line"></div>
+        <div class="skill-bar-percent">95%</div>
+      </div>
+
+      <div class="skillbar" data-percent="45">
+        <div class="skillbar-title development"><span>Python</span></div>
+        <div class="skillbar-bar development_line"></div>
+        <div class="skill-bar-percent">45%</div>
+      </div>
+
+      <div class="skillbar" data-percent="45">
+        <div class="skillbar-title development"><span>Django</span></div>
+        <div class="skillbar-bar development_line"></div>
+        <div class="skill-bar-percent">45%</div>
+      </div>
+      
+      <div class="skillbar" data-percent="35">
+        <div class="skillbar-title development"><span>JavaScript</span></div>
+        <div class="skillbar-bar development_line"></div>
+        <div class="skill-bar-percent">35%</div>
+      </div>
+      
+      <div class="skillbar" data-percent="35">
+        <div class="skillbar-title development"><span>ReactJS</span></div>
+        <div class="skillbar-bar development_line"></div>
+        <div class="skill-bar-percent">35%</div>
+      </div>
+
+      <div class="skillbar" data-percent="35">
+        <div class="skillbar-title development"><span>SQL</span></div>
+        <div class="skillbar-bar development_line"></div>
+        <div class="skill-bar-percent">35%</div>
+      </div>
+      
+      <h3>Дизайн</h3>
+
+      <div class="skillbar" data-percent="55">
+        <div class="skillbar-title development"><span>Photoshop</span></div>
+        <div class="skillbar-bar development_line"></div>
+        <div class="skill-bar-percent">55%</div>
+      </div>
+
+      <div class="skillbar" data-percent="45">
+        <div class="skillbar-title development"><span>Figma</span></div>
+        <div class="skillbar-bar development_line"></div>
+        <div class="skill-bar-percent">45%</div>
+      </div>
+
+      <h3>Другие навыки</h3>
+
+      <div class="skillbar" data-percent="60">
+        <div class="skillbar-title development"><span>Git + Github</span></div>
+        <div class="skillbar-bar development_line"></div>
+        <div class="skill-bar-percent">60%</div>
+      </div>
+
+      <div class="skillbar" data-percent="85">
+        <div class="skillbar-title development"><span>Microsoft Office</span></div>
+        <div class="skillbar-bar development_line"></div>
+        <div class="skill-bar-percent">85%</div>
+      </div>
+
+    </div>
+    <div class="divider divider_skills">
+    </div>
+  </section>
+
+  
 </div>
 {% endblock %} 

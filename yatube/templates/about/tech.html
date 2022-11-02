@@ -2,86 +2,6 @@
 {% block title %}Технологии{% endblock %}
 {% block content %}
 <div class="row">
-  <section class="section_skills" id="section_skills">
-    <h1>Вот что я умею</h1>
-    <div class="section_wrapper">
-      <h3>Разработка</h3>
-
-      <div class="skillbar" data-percent="100">
-        <div class="skillbar-title development"><span>HTML5</span></div>
-        <div class="skillbar-bar development_line"></div>
-        <div class="skill-bar-percent">100%</div>
-      </div>
-      
-      <div class="skillbar" data-percent="95">
-        <div class="skillbar-title development"><span>CSS3</span></div> 
-        <div class="skillbar-bar development_line"></div>
-        <div class="skill-bar-percent">95%</div>
-      </div>
-
-      <div class="skillbar" data-percent="45">
-        <div class="skillbar-title development"><span>Python</span></div>
-        <div class="skillbar-bar development_line"></div>
-        <div class="skill-bar-percent">45%</div>
-      </div>
-
-      <div class="skillbar" data-percent="45">
-        <div class="skillbar-title development"><span>Django</span></div>
-        <div class="skillbar-bar development_line"></div>
-        <div class="skill-bar-percent">45%</div>
-      </div>
-      
-      <div class="skillbar" data-percent="35">
-        <div class="skillbar-title development"><span>JavaScript</span></div>
-        <div class="skillbar-bar development_line"></div>
-        <div class="skill-bar-percent">35%</div>
-      </div>
-      
-      <div class="skillbar" data-percent="35">
-        <div class="skillbar-title development"><span>ReactJS</span></div>
-        <div class="skillbar-bar development_line"></div>
-        <div class="skill-bar-percent">35%</div>
-      </div>
-
-      <div class="skillbar" data-percent="35">
-        <div class="skillbar-title development"><span>SQL</span></div>
-        <div class="skillbar-bar development_line"></div>
-        <div class="skill-bar-percent">35%</div>
-      </div>
-      
-      <h3>Дизайн</h3>
-
-      <div class="skillbar" data-percent="55">
-        <div class="skillbar-title development"><span>Photoshop</span></div>
-        <div class="skillbar-bar development_line"></div>
-        <div class="skill-bar-percent">55%</div>
-      </div>
-
-      <div class="skillbar" data-percent="45">
-        <div class="skillbar-title development"><span>Figma</span></div>
-        <div class="skillbar-bar development_line"></div>
-        <div class="skill-bar-percent">45%</div>
-      </div>
-
-      <h3>Другие навыки</h3>
-
-      <div class="skillbar" data-percent="60">
-        <div class="skillbar-title development"><span>Git + Github</span></div>
-        <div class="skillbar-bar development_line"></div>
-        <div class="skill-bar-percent">60%</div>
-      </div>
-
-      <div class="skillbar" data-percent="85">
-        <div class="skillbar-title development"><span>Microsoft Office</span></div>
-        <div class="skillbar-bar development_line"></div>
-        <div class="skill-bar-percent">85%</div>
-      </div>
-
-    </div>
-    <div class="divider divider_skills">
-    </div>
-  </section>
-
   <section>
     Для разработки данного сайта я использовал популярную библиотеку Python - Django. Конечно же понадобились знания HTML5 и CSS3 и немного javascript, а так же умение работать с запросами к базе данных (SQL).
   </section>
@@ -90,6 +10,39 @@
     <a  href="{% url 'about:author' %}">
       Об авторе
     </a>
+  </section>
+
+  <section class="section_skills" id="section_skills">
+    <div class="section_wrapper">
+      <h3>Технолгии yatube</h3>
+
+      <div class="skillbar" data-percent="70">
+        <div class="skillbar-title development"><span>Python/Django</span></div>
+        <div class="skillbar-bar development_line"></div>
+        <div class="skill-bar-percent">70%</div>
+      </div>
+
+      <div class="skillbar" data-percent="30">
+        <div class="skillbar-title development"><span>HTML5</span></div>
+        <div class="skillbar-bar development_line"></div>
+        <div class="skill-bar-percent">15%</div>
+      </div>
+      
+      <div class="skillbar" data-percent="25">
+        <div class="skillbar-title development"><span>CSS3</span></div> 
+        <div class="skillbar-bar development_line"></div>
+        <div class="skill-bar-percent">10%</div>
+      </div>
+      
+      <div class="skillbar" data-percent="15">
+        <div class="skillbar-title development"><span>JavaScript</span></div>
+        <div class="skillbar-bar development_line"></div>
+        <div class="skill-bar-percent">5%</div>
+      </div>
+
+    </div>
+    <div class="divider divider_skills">
+    </div>
   </section>
 
 </div>
