@@ -137,7 +137,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-# STATIC_ROOT = 'D:/YandexDisk/03_Codings/Sites/88_YandexPracticum/hw05_final/yatube/static/'
+# STATIC_ROOT = '/88_YandexPracticum/hw05_final/yatube/static/'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 LOGIN_URL = 'users:login'
@@ -147,11 +147,11 @@ EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'sent_emails')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
-    }
-}
+# CACHES = {
+#     'default': {
+#         'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+#     }
+# }
 
 # INTERNAL_IPS = [
 #     '127.0.0.1',
