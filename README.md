@@ -49,8 +49,8 @@ python manage.py runserver
 
 ### Использованные технологии:
 ```
-Python 3.9
-Django 2.2.19
+Python
+Django
 SQL
 HTML
 CSS
