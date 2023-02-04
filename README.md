@@ -51,9 +51,9 @@ python manage.py runserver
 ```
 Python
 Django
-SQL
 HTML
 CSS
+SQL
 Git
 Unittest
 ```
