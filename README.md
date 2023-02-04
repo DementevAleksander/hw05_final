@@ -54,7 +54,6 @@ Django
 SQL
 HTML
 CSS
-Django
 Git
 Unittest
 ```
